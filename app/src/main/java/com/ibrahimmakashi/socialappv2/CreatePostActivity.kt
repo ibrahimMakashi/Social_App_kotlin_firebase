@@ -31,7 +31,7 @@ class CreatePostActivity : AppCompatActivity() {
 
         postButton.setOnClickListener {
             val input = postInput.text.toString()
-            if (input.isNotEmpty()){
+            if (input.isNotBlank()){
                 postDao.addPost(input)
                 finish()
             }
